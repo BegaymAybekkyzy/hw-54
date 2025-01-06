@@ -1,6 +1,6 @@
-import './PlayItem.css';
-import * as React from 'react';
-import { MouseEventHandler } from 'react';
+import "./PlayItem.css";
+import * as React from "react";
+import { MouseEventHandler } from "react";
 
 interface Props {
   hasItem: boolean;
@@ -8,11 +8,13 @@ interface Props {
   clickedItem: MouseEventHandler<HTMLDivElement>;
 }
 
-const PlayItem: React.FC<Props> = ({hasItem, clicked, clickedItem}) => {
+const PlayItem: React.FC<Props> = ({ hasItem, clicked, clickedItem }) => {
   return (
-    <div className={`play-item ${clicked ? 'clicked-item' : 'untouched-item'}`}
-         onClick={clickedItem}>
-      {hasItem && clicked ? '🎯' : ''}
+    <div
+      className={`play-item ${clicked ? "clicked-item" : "untouched-item"}`}
+      onClick={clickedItem}
+    >
+      {hasItem && clicked ? "🎯" : ""}
     </div>
   );
 };
